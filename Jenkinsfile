@@ -14,7 +14,7 @@ pipeline {
                 sh 'npm install'
                 sh 'npm install tslint typescript --save-dev'
                 sh 'npm install angular-cli'
-                sh 'ng build'
+                sh '$(npm bin)/ng build --prod --build-optimizer'
                 stash includes: 'dist/', name: 'dist'
             }
         }
