@@ -12,13 +12,10 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
+                sh 'npm install tslint typescript --save-dev'
                 sh 'ng build'
+                stash includes: 'dist/', name: 'dist'
             }
-             post {
-                success {
-                      archiveArtifacts artifacts: 'Angular-5-Sample-Demo/dist/', fingerprint: true
-                            }
-                        }
         }
 
     }
