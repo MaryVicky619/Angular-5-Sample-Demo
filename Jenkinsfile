@@ -9,12 +9,17 @@ pipeline {
         CI = 'true'
     }
     stages {
+    stage ('checkout'){
+          steps{
+            checkout scm
+          }
+        }
         stage('Build') {
             steps {
                 sh 'npm install npm@latest '
                 sh 'npm install tslint typescript --save-dev'
                 sh 'npm install @angular/cli@latest'
-                sh '$(npm bin)/ng build --prod'
+                sh 'npm run build'
             }
         }
 
