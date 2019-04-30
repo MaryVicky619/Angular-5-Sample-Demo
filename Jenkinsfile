@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'npm install npm@latest '
                 sh 'npm install tslint typescript --save-dev'
                 sh 'npm install @angular/cli@latest'
                 sh '$(npm bin)/ng build --prod'
