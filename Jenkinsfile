@@ -13,6 +13,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm install tslint typescript --save-dev'
+                sh 'npm install angular-cli'
                 sh 'ng build'
                 stash includes: 'dist/', name: 'dist'
             }
