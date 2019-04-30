@@ -19,10 +19,10 @@ pipeline {
                 sh 'npm install npm@latest '
                 sh 'npm install tslint typescript --save-dev'
                 sh 'npm install @angular/cli@latest'
-                sh 'npm run build'
+                sh '$(npm bin)/ng build --prod'
             }
         }
-
+        
     }
 }
 
