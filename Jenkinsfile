@@ -19,8 +19,13 @@ pipeline {
                 sh 'npm install npm@latest '
                 sh 'npm install tslint typescript --save-dev'
                 sh 'npm install @angular/cli@latest'
-                sh 'npm run build'
+                sh 'ng build --prod --source-map'
             }
+             post {
+               success {
+                    archiveArtifacts artifacts: 'Angular-5-Sample-Demo/dist/*.bundle.js'
+                            }
+                        }
         }
 
     }
