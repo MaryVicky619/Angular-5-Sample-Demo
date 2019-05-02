@@ -16,10 +16,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm install npm@latest '
-                sh 'npm install tslint typescript --save-dev'
-                sh 'npm install @angular/cli@latest'
-                sh 'ng build --prod --source-map'
+                sh 'npm install npm
+                sh 'npm install -g @angular/cli@latest'
+                sh 'ng build --source-map'
             }
              post {
                success {
