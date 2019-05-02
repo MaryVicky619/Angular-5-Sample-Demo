@@ -16,14 +16,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh './jenkins/global.sh'
                 sh 'npm install'
-                sh 'npm install -g @angular/cli@latest'
-                sh 'ng build --source-map'
+                sh 'npm install @angular/cli@latest'
+                sh 'ng build --watch'
             }
              post {
-               success {
-                    archiveArtifacts artifacts: 'Angular-5-Sample-Demo/dist/*.bundle.js'
+               always {
+                    archiveArtifacts artifacts: 'Angular-5-Sample-Demo/dist/*.js',onlyIfSuccessful: true
                             }
                         }
         }
