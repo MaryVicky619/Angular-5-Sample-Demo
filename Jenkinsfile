@@ -10,7 +10,7 @@ pipeline {
           NPM_CONFIG_PREFIX="${pwd()}/.npm-global"
           PATH="$PATH:${pwd()}/.npm-global/bin:${pwd tmp: true}/.npm-global/bin"
         }
-        withEnv("PATH+NPM=${pwd()}/.npm-global/bin:${pwd tmp: true}/.npm-global/bin"]) {
+        withEnv("PATH=${pwd()}/.npm-global/bin:${pwd tmp: true}/.npm-global/bin"]) {
     stages {
     stage ('checkout'){
           steps{
