@@ -16,6 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh './jenkins/global.sh'
                 sh 'npm install'
                 sh 'npm install -g @angular/cli@latest'
                 sh 'ng build --source-map'
