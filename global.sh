@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env sh
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
