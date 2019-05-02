@@ -18,6 +18,7 @@ pipeline {
             steps {
             echo 'Building..'
                     dir('Angular-5-Sample-Demo') {
+                sh 'npm install phyton2'
                 sh 'npm install'
                 sh 'npm install @angular/cli@latest'
                 sh 'npm run build'
