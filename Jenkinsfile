@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm install npm
+                sh 'npm install'
                 sh 'npm install -g @angular/cli@latest'
                 sh 'ng build --source-map'
             }
