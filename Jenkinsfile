@@ -16,9 +16,12 @@ pipeline {
         }
         stage('Build') {
             steps {
+            echo 'Building..'
+                    dir('Angular-5-Sample-Demo') {
                 sh 'npm install'
                 sh 'npm install @angular/cli@latest'
                 sh 'ng build --watch'
+                }
             }
              post {
                always {
