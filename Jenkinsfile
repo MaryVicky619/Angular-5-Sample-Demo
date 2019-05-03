@@ -14,7 +14,7 @@ pipeline {
             }
              post {
                always {
-                    archiveArtifacts artifacts: 'Angular-5-Sample-Demo/dist/*.js',onlyIfSuccessful: true
+                    archiveArtifacts artifacts: 'dist/*.js',onlyIfSuccessful: true
                             }
                         }
         }
