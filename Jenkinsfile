@@ -19,8 +19,7 @@ pipeline {
             echo 'Building..'
                     dir('Angular-5-Sample-Demo') {
                 sh 'npm install'
-                sh 'npm install @angular/cli@latest'
-                sh 'npm run build'
+                sh 'ng build --watch'
                 }
             }
              post {
