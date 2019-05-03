@@ -17,10 +17,8 @@ pipeline {
         stage('Build') {
             steps {
             echo 'Building..'
-                    dir('Angular-5-Sample-Demo') {
                 sh 'npm install'
                 sh 'ng serve'
-                }
             }
              post {
                always {
