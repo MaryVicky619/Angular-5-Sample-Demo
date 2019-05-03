@@ -15,8 +15,6 @@ pipeline {
           }
         }
         stage('Build') {
-        agent {
-            }
             steps {
             echo 'Building..'
                     dir('Angular-5-Sample-Demo') {
