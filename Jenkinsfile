@@ -10,7 +10,7 @@ pipeline {
             steps {
             echo 'Building..'
                 sh 'npm install'
-                sh 'ng build --watch'
+                sh 'ng build'
             }
              post {
                always {
