@@ -20,7 +20,7 @@ pipeline {
         }
          stage('Test') {
                     steps {
-                     withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+                     withEnv(["CHROME_BIN=/usr/bin/ChromeHeadless"]) {
                               echo 'Testing...'
                               sh '$(npm bin)/ng test'
                             }
