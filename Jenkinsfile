@@ -18,7 +18,17 @@ pipeline {
                             }
                         }
         }
-
+         stage('Test') {
+                    steps {
+                    echo 'Testing...'
+                    sh '$(npm bin)/ng test'
+                    }
+                     post {
+                       always {
+                            junit "test-results.xml"
+                                    }
+                                }
+                }
     }
 }
 
