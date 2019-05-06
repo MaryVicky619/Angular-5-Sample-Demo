@@ -22,7 +22,10 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml','junit'],
+    junitReporter    : {
+      outputDir : 'target/surefire-reports/'
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

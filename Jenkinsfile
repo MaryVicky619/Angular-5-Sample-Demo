@@ -21,11 +21,11 @@ pipeline {
          stage('Test') {
                     steps {
                     echo 'Testing...'
-                    sh '$(npm bin)/ng test'
+                    sh '$(npm bin)/ng test --progress false --watch false'
                     }
                      post {
                        always {
-                            junit "test-results.xml"
+                            junit allowEmptyResults: false, testResults: '**/test-results.xml'
                                     }
                                 }
                 }
