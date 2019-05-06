@@ -21,7 +21,7 @@ pipeline {
          stage('Test') {
                     steps {
                     echo 'Testing...'
-                    sh '$(npm bin)/ng test --progress false --watch false'
+                    sh '$(npm bin)/ng test'
                     }
                      post {
                        always {
