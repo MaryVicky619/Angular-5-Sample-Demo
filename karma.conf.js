@@ -23,12 +23,12 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
+    reporters: ['progress', 'kjhtml','junit'],
     junitReporter: {
       outputDir:'reports',
       outputFile: 'test-results-karma.xml',
       suite: ''
     },
-    reporters: ['progress', 'kjhtml','junit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
