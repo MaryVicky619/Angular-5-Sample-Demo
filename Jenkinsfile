@@ -27,7 +27,7 @@ pipeline {
                     }
                      post {
                        always {
-                            junit allowEmptyResults: false, testResults: '**/test-results-karma.xml'
+                            junit allowEmptyResults: false, testResults: 'reports/test-results-karma.xml'
                                     }
                                 }
                 }

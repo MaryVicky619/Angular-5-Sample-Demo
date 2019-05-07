@@ -24,6 +24,7 @@ module.exports = function (config) {
       environment: 'dev'
     },
     junitReporter: {
+      outputDir:'reports',
       outputFile: 'test-results-karma.xml',
       suite: ''
     },
