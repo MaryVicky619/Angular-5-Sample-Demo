@@ -20,12 +20,14 @@ pipeline {
         }
          stage('Test') {
                     steps {
+                     withEnv(["CHROME_BIN=/usr/bin/ChromeHeadless"]) {
                               echo 'Testing...'
-                              sh ('./node_modules/karma/bin/karma start karma.conf.js')
+                              sh '$(npm bin)/ng test'
+                            }
                     }
                      post {
                        always {
-                           testResults: 'HeadlessChrome_0.0.0_(Linux_0.0.0)/*.xml'
+                            junit allowEmptyResults: false, testResults: 'HeadlessChrome_0.0.0_(Linux_0.0.0)/*.xml'
                                     }
                                 }
                 }
