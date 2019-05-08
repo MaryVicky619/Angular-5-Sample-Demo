@@ -27,7 +27,7 @@ pipeline {
                     }
                      post {
                        always {
-                            junit allowEmptyResults: false, testResults: 'reports/test-results-karma.xml'
+                            junit allowEmptyResults: false, testResults: 'HeadlessChrome_0.0.0_(Linux_0.0.0)/test-results-karma.xml'
                                     }
                                 }
                 }
