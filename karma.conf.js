@@ -28,7 +28,6 @@ module.exports = function (config) {
       outputDir:'HeadlessChrome_0.0.0_(Linux_0.0.0)',
       outputFile: 'test-results-karma.xml',
       suite: 'unit',
-      useBrowserName: false,
     },
     port: 9876,
     colors: true,

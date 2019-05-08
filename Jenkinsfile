@@ -27,7 +27,7 @@ pipeline {
                     }
                      post {
                        always {
-                            junit allowEmptyResults: false, testResults: 'HeadlessChrome_0.0.0_(Linux_0.0.0)/*.xml'
+                            junit 'HeadlessChrome_0.0.0_(Linux_0.0.0)/*.xml'
                                     }
                                 }
                 }
