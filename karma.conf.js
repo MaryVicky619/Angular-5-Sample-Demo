@@ -36,6 +36,6 @@ module.exports = function (config) {
     autoWatch: true,
     captureTimeout: 60000,
     browsers: ['Chrome'],
-    singleRun: false
+    singleRun: true
   });
 };
