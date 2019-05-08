@@ -25,7 +25,7 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'kjhtml','junit'],
     junitReporter: {
-      outputDir:'reports',
+      outputDir:'HeadlessChrome_0.0.0_(Linux_0.0.0)',
       outputFile: 'test-results-karma.xml',
       suite: 'unit',
       useBrowserName: false,

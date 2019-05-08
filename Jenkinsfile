@@ -21,12 +21,11 @@ pipeline {
          stage('Test') {
                     steps {
                               echo 'Testing...'
-                              sh ('./node_modules/karma/bin/karma start karma.conf.js)
-
+                              sh ('./node_modules/karma/bin/karma start karma.conf.js')
                     }
                      post {
                        always {
-                            junit allowEmptyResults: false, testResults: 'reports/test-results-karma.xml'
+                           testResults: 'HeadlessChrome_0.0.0_(Linux_0.0.0)/*.xml'
                                     }
                                 }
                 }
