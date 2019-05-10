@@ -20,8 +20,10 @@ pipeline {
         }
          stage('Test') {
                     steps {
+                     withEnv(["CHROME_BIN=/usr/bin/ChromeHeadless"]) {
                               echo 'Testing...'
                               sh ('./node_modules/karma/bin/karma start karma.conf.js')
+                            }
                     }
                      post {
                        always {
