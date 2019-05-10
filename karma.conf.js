@@ -40,7 +40,6 @@ module.exports = function (config) {
       '--disable-gpu',
       '--no-sandbox'
     ],
-    failOnEmptyTestSuite: false,
     singleRun: false
   });
 };
