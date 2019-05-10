@@ -27,7 +27,7 @@ pipeline {
                     }
                      post {
                        always {
-                            junit 'HeadlessChrome_0.0.0_(Linux_0.0.0)/*.xml'
+                            junit 'reports/*.xml'
                                     }
                                 }
                 }
