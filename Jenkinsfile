@@ -23,7 +23,6 @@ pipeline {
         CHROME_BIN = '/usr/bin/ChromeHeadless'
       }
     steps {
-            withEnv(overrides: ["CHROME_BIN=/usr/bin/ChromeHeadless"]) {
               echo 'Testing...'
               sh 'ng test'
             }
@@ -35,3 +34,4 @@ pipeline {
 }
 
 }
+
