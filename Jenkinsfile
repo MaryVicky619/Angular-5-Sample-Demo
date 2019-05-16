@@ -24,7 +24,7 @@ pipeline {
          }
     steps {
               echo 'Testing...'
-              sh 'ng test --watch false'
+              sh 'npm run test:ci'
             }
              post {
                 always {

@@ -34,11 +34,13 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     captureTimeout: 60000,
-    browsers: ['ChromeHeadless'],
-    flags: [
-      '--disable-web-security',
-      '--no-sandbox'
-    ],
-    singleRun: false
+    browsers: ['chrome','ChromeHeadless'],
+    customLaunchers: {
+      HeadlessChrome: {
+        base: "ChromeHeadless",
+        flags: ["--no-sandbox"]
+      }
+  },
+    singleRun: true
   });
 };
