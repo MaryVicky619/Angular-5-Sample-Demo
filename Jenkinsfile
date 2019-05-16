@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('checkout') {
       steps {
@@ -21,6 +21,10 @@ pipeline {
       }
     }
     stage('Test') {
+      agent any
+      environment {
+        CHROME_BIN = '/usr/bin/ChromeHeadless'
+      }
       post {
         always {
           junit 'reports/*.xml'
@@ -29,12 +33,13 @@ pipeline {
 
       }
       steps {
-        withEnv(overrides: ["CHROME_BIN=/usr/bin/ChromeHeadless"]) {
-          echo 'Testing...'
-          sh 'ng test --watch false'
-        }
-
+        sh '''echo \'Testing...\'
+              '''
+        sh 'sh \'ng test --watch false\''
       }
     }
+  }
+  environment {
+    CHROME_BIN = '/usr/bin/ChromeHeadless'
   }
 }
