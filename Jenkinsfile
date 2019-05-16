@@ -35,7 +35,7 @@ pipeline {
       steps {
         sh '''echo \'Testing...\'
               '''
-        sh '\'ng test --watch false\''
+        sh 'ng test '
       }
     }
   }
