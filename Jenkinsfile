@@ -19,6 +19,9 @@ pipeline {
       }
     }
     stage('Test') {
+    environment {
+           CHROME_BIN = '/usr/bin/ChromeHeadless'
+         }
     steps {
               echo 'Testing...'
               sh 'ng test'
