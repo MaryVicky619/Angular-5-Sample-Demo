@@ -24,7 +24,7 @@ pipeline {
          }
     steps {
               echo 'Testing...'
-              sh 'ng test'
+              sh 'ng test --watch false'
             }
              post {
                 always {
