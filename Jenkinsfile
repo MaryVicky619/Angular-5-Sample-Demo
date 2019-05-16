@@ -19,19 +19,17 @@ pipeline {
       }
     }
     stage('Test') {
-      environment {
-        CHROME_BIN = '/usr/bin/ChromeHeadless'
-      }
     steps {
               echo 'Testing...'
               sh 'ng test'
             }
+             post {
+                always {
+                 junit allowEmptyResults: false, testResults: 'reports/HeadlessChrome_0.0.0_(Linux_0.0.0)/test-results-karma.xml'
+                   }
+                }
       }
 
       }
     }
-  }
-}
-
-}
 
