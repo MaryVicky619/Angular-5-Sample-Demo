@@ -33,9 +33,8 @@ pipeline {
 
       }
       steps {
-        sh '''echo \'Testing...\'
-              '''
         sh './node_modules/karma/bin/karma start karma.conf.js'
+        echo 'Testing'
       }
     }
   }
