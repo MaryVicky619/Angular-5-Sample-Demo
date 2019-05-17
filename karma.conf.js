@@ -4,7 +4,7 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', '@angular/cli'],
+    frameworks: ['jasmine', '@angular/cli','requirejs'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
@@ -33,6 +33,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
+    singleRun: true,
     captureTimeout: 60000,
     browsers: ['ChromeHeadless'],
     customLaunchers: {
@@ -40,7 +41,6 @@ module.exports = function (config) {
         base: "ChromeHeadless",
         flags: ["--no-sandbox"]
       }
-    },
-    singleRun: true
+    }
   });
 };

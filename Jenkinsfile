@@ -24,11 +24,11 @@ pipeline {
          }
     steps {
               echo 'Testing...'
-              sh ' $(npm bin)/ng test'
+              sh 'ng test --watch false'
             }
              post {
                 always {
-                 junit allowEmptyResults: false, testResults: 'reports/HeadlessChrome_0.0.0_(Linux_0.0.0)/test-results-karma.xml'
+                 junit testResults:'reports/HeadlessChrome_0.0.0_(Linux_0.0.0)/test-results-karma.xml'
                    }
                 }
       }
