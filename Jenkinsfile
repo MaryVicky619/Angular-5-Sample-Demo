@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Test') {
     environment {
-           CHROME_BIN='/usr/bin/chromium-browser'
+           CHROME_BIN='/usr/bin/ChromeHeadless'
          }
     steps {
               echo 'Testing...'
@@ -28,7 +28,7 @@ pipeline {
             }
              post {
                 always {
-                 junit allowEmptyResults: false, testResults: 'reports/Chrome_74.0.3729_(Linux_0.0.0)/test-results-karma.xml'
+                 junit allowEmptyResults: false, testResults: 'reports/HeadlessChrome_0.0.0_(Linux_0.0.0)/test-results-karma.xml'
                    }
                 }
       }
