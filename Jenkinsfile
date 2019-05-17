@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Test') {
     environment {
-           CHROME_BIN = '/usr/bin/Chrome'
+           CHROME_BIN = 'CHROME_BIN=/usr/bin/chromium-browse'
          }
     steps {
               echo 'Testing...'
