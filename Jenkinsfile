@@ -24,7 +24,7 @@ pipeline {
          }
     steps {
               echo 'Testing...'
-              sh 'npm run test:ci'
+              sh ' $(npm bin)/ng test'
             }
              post {
                 always {
